@@ -102,7 +102,7 @@ public class FabricConnectionListener extends AbstractConnectionListener {
             // deny the connection
             Component reason = TranslationManager.render(Message.LOADING_DATABASE_ERROR.build());
             netHandler.disconnect(FabricSenderFactory.toNativeText(reason));
-            ex.printStackTrace();
+            ex.printStackTrace();//
             this.plugin.getEventDispatcher().dispatchPlayerLoginProcess(uniqueId, username, null);
         }
     }
